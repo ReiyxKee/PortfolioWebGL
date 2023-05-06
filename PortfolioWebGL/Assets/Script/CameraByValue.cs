@@ -48,8 +48,6 @@ namespace Portfolio
 
         public void Movement(float _input)
         {
-            Debug.Log(_input);
-
             if (_input == 0) return;
 
             if (_input < 0 && value == headerValue)

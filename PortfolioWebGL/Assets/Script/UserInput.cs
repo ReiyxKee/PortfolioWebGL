@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Portfolio
 {
@@ -10,6 +11,8 @@ namespace Portfolio
         public static event ScrollDelegate OnScroll;
 
         private static UserInput instance;
+
+        private bool scrollLock;
 
         public static UserInput GetInstance()
         {
@@ -28,8 +31,29 @@ namespace Portfolio
             }
         }
 
+        private void Start()
+        {
+            MouseRaycast.ObjectHitEvent += OnObjectHit;    
+        }
+
+        private void OnObjectHit(GameObject gameObject)
+        {
+            scrollLock = IsOnScrollView(gameObject);
+        }
+
+        bool IsOnScrollView(GameObject gameObject)
+        {
+            if (gameObject == null) return false;
+
+            if (gameObject.name != "Lid") return false;
+
+            return true;
+        }
+
         void Update()
         {
+            if (scrollLock) return;
+
             float scrollDelta = Input.GetAxis("Mouse ScrollWheel");
 
             if (scrollDelta != 0)
