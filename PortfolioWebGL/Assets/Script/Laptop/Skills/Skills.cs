@@ -31,11 +31,10 @@ namespace Portfolio
 
     public enum SkillType
     {
-        _coding,
-        _game,
-        _web,
-        _discordBot,
-        _database,
+        All,
+        GameDevelopment,
+        WebFrontend,
+        WebBackend,
         _3D
     }
 

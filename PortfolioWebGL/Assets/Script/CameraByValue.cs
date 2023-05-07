@@ -38,10 +38,10 @@ namespace Portfolio
         // Update is called once per frame
         void Update()
         {
-            this.transform.position = SetPos();
+            this.transform.position = GetPos();
         }
 
-        public Vector3 SetPos()
+        public Vector3 GetPos()
         {
             return new Vector3(0, value, -15);
         }
