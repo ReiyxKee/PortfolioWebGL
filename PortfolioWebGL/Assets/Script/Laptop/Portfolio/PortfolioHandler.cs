@@ -10,7 +10,7 @@ namespace Portfolio
         [SerializeField] private List<PortfolioItem> portfolioList;
 
         [SerializeField] private GameObject portfolioListPrefab;
-        [SerializeField] private GameObject portfolioDetialPrefab;
+//        [SerializeField] private GameObject portfolioDetialPrefab;
 
         [SerializeField] private Transform parentList;
         [SerializeField] private Transform parentDetial;
@@ -33,13 +33,14 @@ namespace Portfolio
             {
                 GameObject item = Instantiate(portfolioListPrefab, parentList);
 
-                PatchList(item);
+                PatchList(item, portfolioItem);
             }
         }
 
-        void PatchList(GameObject listPrefab)
+        void PatchList(GameObject listPrefab, PortfolioItem _pI)
         {
-
+            ListItemPlaceholder listItem = listPrefab.GetComponent<ListItemPlaceholder>();
+            listItem.PatchItem(_pI);
         }
 
         void PatchDetialPage(GameObject pagePrefab)
@@ -59,4 +60,10 @@ namespace Portfolio
         _3D
     }
 
+    [System.Serializable]
+    public struct SiteIcon
+    {
+        public string name;
+        public Sprite sprite;
+    }
 }
