@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Portfolio
 {
@@ -10,11 +11,11 @@ namespace Portfolio
         [SerializeField] private List<PortfolioItem> portfolioList;
 
         [SerializeField] private GameObject portfolioListPrefab;
-//        [SerializeField] private GameObject portfolioDetialPrefab;
 
         [SerializeField] private Transform parentList;
         [SerializeField] private Transform parentDetial;
 
+        [SerializeField] private DetialContentPlaceholder fullPagePlaceholder;
         // Start is called before the first frame update
         void Start()
         {
@@ -32,8 +33,27 @@ namespace Portfolio
             foreach (PortfolioItem portfolioItem in portfolioList)
             {
                 GameObject item = Instantiate(portfolioListPrefab, parentList);
+                
+                item.AddComponent<PortfolioOnClick>();
 
+                AssignOnClickEvent(item, portfolioItem);
                 PatchList(item, portfolioItem);
+            }
+        }
+
+        void AssignOnClickEvent(GameObject _prefab, PortfolioItem _item)
+        {
+            PortfolioOnClick onClick = _prefab.AddComponent<PortfolioOnClick>();
+
+            onClick.SetParameters(fullPagePlaceholder, _item, selectionList);
+
+            if (_prefab.GetComponent<Button>() == null)
+            {
+                _prefab.AddComponent<Button>().onClick.AddListener(() => onClick.Action());
+            }
+            else
+            {
+                _prefab.GetComponent<Button>().onClick.AddListener(() => onClick.Action());
             }
         }
 

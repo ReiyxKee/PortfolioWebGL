@@ -9,20 +9,64 @@ namespace Portfolio
 {
     public class DetialContentPlaceholder : MonoBehaviour
     {
-        private Transform portfolioList;
-        private Image screenshotHolder;
-        private List<Sprite> screenshots;
-        private GameObject screenshotBulletPrefab;
-        private Transform bulletParent;
+        [SerializeField] private Transform portfolioList;
+        [SerializeField] private Image screenshotHolder;
+        [SerializeField] private Image downloadFrom;
+        [SerializeField] private List<Sprite> screenshots;
+        [SerializeField] private GameObject screenshotBulletPrefab;
+        [SerializeField] private Transform bulletParent;
 
-        private TextMeshProUGUI title;
-        private TextMeshProUGUI desc;
+        [SerializeField] private TextMeshProUGUI title;
+        [SerializeField] private TextMeshProUGUI desc;
 
-        private Button site;
-        private Button back;
+        [SerializeField] private Button site;
+        [SerializeField] private Button back;
+
+        [SerializeField] private List<SiteIcon> siteIcon;
+        ReiyxDev.WebDomainInterpreter _domainCheck = new ReiyxDev.WebDomainInterpreter();
+
+        private int defaultScreenshotPoolCount = 10;
+
+        private float slideshowDuration = 2;
+        private int currentSlideshow = 0;
+
+        private Coroutine slideshowCycleCor;
+        private void Start()
+        {
+            for (int i = 0; i < defaultScreenshotPoolCount; i++)
+            {
+                Instantiate(screenshotBulletPrefab, bulletParent);
+            }
+
+
+            HideAllBullet();
+
+            BackList();
+        }
+
+        private IEnumerator SlideshowCycle()
+        {   
+            while (true)
+            {
+                yield return new WaitForSeconds(slideshowDuration);
+
+                if (currentSlideshow + 1 > screenshots.Count - 1)
+                {
+                    currentSlideshow = 0;
+                }
+                else
+                {
+                    currentSlideshow++;
+                }
+
+                ShowScreenshot(screenshots[currentSlideshow]);
+            }
+        }
 
         public void PatchDetial(PortfolioItem _item)
         {
+            currentSlideshow = 0;
+
             title.text = _item.GetProjectName();
             
             desc.text = _item.GetProjectDesc();
@@ -32,6 +76,8 @@ namespace Portfolio
 
             back.onClick.RemoveAllListeners();
             back.onClick.AddListener(() => BackList());
+
+            downloadFrom.sprite = GetSiteIcon(_item.GetURL());
 
             screenshots = _item.GetScreenshots();
             screenshotHolder.sprite = screenshots[0];
@@ -45,11 +91,22 @@ namespace Portfolio
                     Instantiate(screenshotBulletPrefab, bulletParent);
                 }
             }
-
+            
             for (int i = 0; i < screenshots.Count; i++)
             {
                 AssignSpriteToBullet(GetSetActiveBullet(i).GetComponent<Button>(), i);
             }
+
+        }
+
+        public Sprite GetSiteIcon(string _url)
+        {
+            return siteIcon.Find(s => s.name == _domainCheck.CheckDomain(_url)).sprite;
+        }
+
+        public void StartSlideshowCoroutine()
+        {
+            slideshowCycleCor = StartCoroutine(SlideshowCycle());
         }
 
         public GameObject GetSetActiveBullet(int i)
@@ -78,6 +135,7 @@ namespace Portfolio
         public void ShowScreenshot(Sprite _sprite)
         {
             screenshotHolder.sprite = _sprite;
+            screenshotHolder.preserveAspect = true;
         }
 
         public void OpenSite(string url)
@@ -87,6 +145,11 @@ namespace Portfolio
 
         public void BackList()
         {
+            if (slideshowCycleCor != null)
+            {
+                StopCoroutine(slideshowCycleCor);
+            }
+
             this.gameObject.SetActive(false);
             portfolioList.gameObject.SetActive(true);
         }
