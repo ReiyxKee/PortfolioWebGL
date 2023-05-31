@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 45999190}
   - component: {fileID: 45999192}
   - component: {fileID: 45999191}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Parts (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1181,7 +1181,7 @@ GameObject:
   - component: {fileID: 221872504}
   - component: {fileID: 221872506}
   - component: {fileID: 221872505}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Parts (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1222,7 +1222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2575,7 +2575,7 @@ GameObject:
   - component: {fileID: 501269758}
   - component: {fileID: 501269760}
   - component: {fileID: 501269759}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2599,7 +2599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -361, y: 385.19397}
+  m_AnchoredPosition: {x: -323, y: 385.19397}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &501269759
@@ -2616,7 +2616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3207,7 +3207,7 @@ GameObject:
   - component: {fileID: 640969721}
   - component: {fileID: 640969723}
   - component: {fileID: 640969722}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3231,7 +3231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 365, y: -388.15982}
+  m_AnchoredPosition: {x: 307, y: -388.15982}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &640969722
@@ -3248,7 +3248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3519,7 +3519,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -5.701103e+9, y: -0.000030517578}
+  m_AnchoredPosition: {x: -2063406.6, y: -0.000030517578}
   m_SizeDelta: {x: 476, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &707569234
@@ -4885,7 +4885,7 @@ GameObject:
   - component: {fileID: 1015981055}
   - component: {fileID: 1015981057}
   - component: {fileID: 1015981056}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4926,7 +4926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6254,7 +6254,7 @@ GameObject:
   - component: {fileID: 1155619655}
   - component: {fileID: 1155619657}
   - component: {fileID: 1155619656}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Parts (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6295,7 +6295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -7147,13 +7147,13 @@ GameObject:
   - component: {fileID: 1577089085}
   - component: {fileID: 1577089084}
   - component: {fileID: 1577089088}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Startup Splash Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1577089084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7621,7 +7621,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1741063471}
   m_HandleRect: {fileID: 1741063470}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8382,7 +8382,7 @@ GameObject:
   - component: {fileID: 1850420340}
   - component: {fileID: 1850420342}
   - component: {fileID: 1850420341}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Parts (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8423,7 +8423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -9073,8 +9073,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 150201655}
   m_HandleRect: {fileID: 150201654}
   m_Direction: 0
-  m_Value: 131869280
-  m_Size: 0.91556054
+  m_Value: 280462.72
+  m_Size: 0.98454607
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
