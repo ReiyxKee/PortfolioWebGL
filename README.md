@@ -22,10 +22,13 @@ To explore the source code of the portfolio website locally, follow these steps:
    git clone https://github.com/ReiyxKee/your-portfolio-repo.git
    ```
    
-3. Open the cloned/downloaded project thru Unity Hub. (Open > Add Project from disk > Navigate to [{Desired-Clone-Path}/PortfolioWebGL])
+2. Open the cloned/downloaded repository thru Unity Hub.
+
+   *Open > Add Project from disk > Navigate to {repository-path}/PortfolioWebGL*
 
    Outline of Directory as follows
    ```bash
+   Assets
    ├── 2D Assets/
    ├── 3D Model/
    ├── Fonts/
