@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to my public repository showcasing the source code behind my portfolio [ReiyxKee.github.io](ReiyxKee.github.io). 
+Welcome to my public repository showcasing the source code behind my portfolio [ReiyxKee.github.io](https://reiyxkee.github.io). 
 This portfolio is developed using **Unity3D *v2021.3.11f1***, and this public repository serves as a platform to provide insights for my programming and development skills.
 
 
