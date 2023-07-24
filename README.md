@@ -40,7 +40,7 @@ To explore the source code of the portfolio website locally, follow these steps:
 
 ## License
 
-The source code in this repository is licensed under the [MIT License](LICENSE).
+The source code in this repository is licensed under the [GNU General Public License v3.0](LICENSE).
 
 ## Contact
 
